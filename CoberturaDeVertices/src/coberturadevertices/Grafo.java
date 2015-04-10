@@ -4,20 +4,14 @@ public class Grafo {
 
     private final int numVertices;
     private ContenedorAristas aristas;
-    private final EstructuraParticion estructuraParticion;
     private ConjuntoVertices vertices;
 
     public Grafo(int numVertices) {
         this.numVertices = numVertices;
-        estructuraParticion = new EstructuraParticion(numVertices);
     }
 
     public int getNumVertices() {
         return numVertices;
-    }
-
-    public EstructuraParticion getEstructuraParticion() {
-        return estructuraParticion;
     }
 
     public void añadirContenedorAristas(ContenedorAristas contenedorAristas) {
