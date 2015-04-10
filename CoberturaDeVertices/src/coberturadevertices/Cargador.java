@@ -5,11 +5,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class CVSCargador {
+public class Cargador {
 
     private BufferedReader lector = null;
 
-    public CVSCargador(String ruta) {
+    public Cargador(String ruta) {
         try {
             this.lector = new BufferedReader(new FileReader(ruta));
         } catch (FileNotFoundException ex) {

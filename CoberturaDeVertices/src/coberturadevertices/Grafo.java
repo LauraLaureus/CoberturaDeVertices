@@ -32,7 +32,4 @@ public class Grafo {
         this.vertices = vertices;
     }
 
-    public boolean esConexo() {
-        return vertices.esConexo();
-    }
 }

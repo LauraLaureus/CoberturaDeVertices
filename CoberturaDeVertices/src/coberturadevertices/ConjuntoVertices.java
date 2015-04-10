@@ -19,9 +19,6 @@ public class ConjuntoVertices {
         }
     }
 
-    public boolean esConexo() {
-        return new EstructuraConexion(conjunto).estaTotalmenteConectado();
-    }
 
     public boolean contiene(Vertice v) {
         return conjunto.containsValue(v);
