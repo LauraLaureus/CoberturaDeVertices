@@ -46,4 +46,7 @@ public class Arista implements Comparable<Arista> {
         return false;
     }
 
+    public Arista clone(){
+        return new Arista(u,v,peso);
+    }
 }

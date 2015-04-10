@@ -44,4 +44,12 @@ public class ContenedorAristas extends ArrayList<Arista> {
         Collections.sort(this, comparador);
         return this.toArray();
     }
+    
+    public ContenedorAristas clone(){
+        ContenedorAristas nuevo = new ContenedorAristas();
+        for (Arista a : this) {
+            nuevo.add( (Arista) a.clone());
+        }
+        return null;
+    }
 }

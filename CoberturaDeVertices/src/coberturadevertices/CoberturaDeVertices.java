@@ -1,22 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package coberturadevertices;
 
-/**
- *
- * @author usuario
- */
+import java.util.Iterator;
+
 public class CoberturaDeVertices {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Cargador cargador = new Cargador("entrada.txt");
+        Grafo g = cargador.carga();
+        coberturaVertices(g);
+    }
+
+    private static void coberturaVertices(Grafo g) {
+        ConjuntoVertices conjuntoVertices = new ConjuntoVertices();
+        ContenedorAristas e = g.getAristas();
+        ContenedorAristas eAux = new ContenedorAristas();
+        
+        Iterator<Arista> it = e.iterator();
+        while (it.hasNext()){
+            Arista arista = it.next();
+            
+        }
     }
     
 }
