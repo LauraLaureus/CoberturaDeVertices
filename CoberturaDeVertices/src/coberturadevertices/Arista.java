@@ -1,5 +1,7 @@
 package coberturadevertices;
 
+import java.util.Objects;
+
 public class Arista implements Comparable<Arista> {
 
     private final Integer u;
@@ -13,7 +15,7 @@ public class Arista implements Comparable<Arista> {
         return v;
     }
     private final int peso;
-
+    
     public Arista(int a, int b, int peso) {
         this.u = a;
         this.v = b;
@@ -48,5 +50,9 @@ public class Arista implements Comparable<Arista> {
 
     public Arista clone(){
         return new Arista(u,v,peso);
+    }
+    
+    public boolean tieneVertice(Integer vertice){
+        return vertice.equals(u) || vertice.equals(v);
     }
 }

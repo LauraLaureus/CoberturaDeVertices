@@ -52,4 +52,12 @@ public class ContenedorAristas extends ArrayList<Arista> {
         }
         return null;
     }
+    
+    public ContenedorAristas getAristas (Integer vertice){
+        ContenedorAristas result = new ContenedorAristas();
+        for (Arista arista : this) {
+            if (arista.tieneVertice(vertice)) result.add(arista);
+        }
+        return result;
+    }
 }
