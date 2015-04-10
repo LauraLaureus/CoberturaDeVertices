@@ -7,18 +7,30 @@ public class CoberturaDeVertices {
     public static void main(String[] args) {
         Cargador cargador = new Cargador("entrada.txt");
         Grafo g = cargador.carga();
-        coberturaVertices(g);
+        salida(coberturaVertices(g));
     }
 
-    private static void coberturaVertices(Grafo g) {
+    private static ConjuntoVertices coberturaVertices(Grafo g) {
         ConjuntoVertices conjuntoVertices = new ConjuntoVertices();
-        ContenedorAristas e = g.getAristas();
+        ContenedorAristas e = g.getAristas().clone();
         ContenedorAristas eAux = new ContenedorAristas();
         
         Iterator<Arista> it = e.iterator();
         while (it.hasNext()){
             Arista arista = it.next();
-            
+            eAux = e.getAristas(arista.getU());
+            eAux.addAll(e.getAristas(arista.getV()));
+            conjuntoVertices.añadeVértice(g.getVertice(arista.getU()));
+            conjuntoVertices.añadeVértice(g.getVertice(arista.getV()));
+            e.removeAll(eAux);
+        }
+        
+        return conjuntoVertices;
+    }
+
+    private static void salida(ConjuntoVertices coberturaVertices) {
+        for (Integer vertice : coberturaVertices.getConjunto().keySet()) {
+            System.out.println("Vértice " + vertice);
         }
     }
     

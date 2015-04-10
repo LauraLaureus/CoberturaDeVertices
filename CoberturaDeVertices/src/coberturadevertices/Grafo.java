@@ -25,5 +25,9 @@ public class Grafo {
     public void añadirVertices(ConjuntoVertices vertices) {
         this.vertices = vertices;
     }
+    
+    public Vertice getVertice(int id){
+        return this.vertices.dameVertice(id);
+    }
 
 }
