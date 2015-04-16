@@ -50,7 +50,7 @@ public class ContenedorAristas extends ArrayList<Arista> {
         for (Arista a : this) {
             nuevo.add( (Arista) a.clone());
         }
-        return null;
+        return nuevo;
     }
     
     public ContenedorAristas getAristas (Integer vertice){

@@ -23,6 +23,7 @@ public class CoberturaDeVertices {
             conjuntoVertices.añadeVértice(g.getVertice(arista.getU()));
             conjuntoVertices.añadeVértice(g.getVertice(arista.getV()));
             e.removeAll(eAux);
+            it = e.iterator();
         }
         
         return conjuntoVertices;
