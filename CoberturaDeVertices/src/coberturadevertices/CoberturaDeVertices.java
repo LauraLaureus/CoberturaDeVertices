@@ -7,7 +7,9 @@ public class CoberturaDeVertices {
     public static void main(String[] args) {
         Cargador cargador = new Cargador("entrada.txt");
         Grafo g = cargador.carga();
-        salida(coberturaVertices(g));
+        ConjuntoVertices conjuntoVertices = coberturaVertices(g);
+        salida(conjuntoVertices);
+        Prueba.prueba(g, conjuntoVertices);
     }
 
     private static ConjuntoVertices coberturaVertices(Grafo g) {
